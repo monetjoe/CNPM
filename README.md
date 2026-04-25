@@ -1,39 +1,7 @@
-# CNPM
+# 中国民族五声调式识别器 WebUI
+[![license](https://img.shields.io/github/license/monetjoe/CNPM.svg)](./LICENSE)
+[![auto-sync](https://github.com/monetjoe/CNPM/actions/workflows/auto-sync.yml/badge.svg)](https://github.com/monetjoe/CNPM/actions/workflows/auto-sync.yml)
+[![hf](https://img.shields.io/badge/huggingface-CNPM-ffd21e.svg)](https://huggingface.co/spaces/ccmusic-database/CNPM)
+[![ms](https://img.shields.io/badge/modelscope-CNPM-624aff.svg)](https://modelscope.cn/studios/ccmusic-database/CNPM)
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+中国民族五声调式识别器是一款专门设计用于识别和分析中国民族音乐中五声调式的软件工具，它能够准确识别音乐作品中的五声调式，帮助音乐学者、作曲家和爱好者深入理解和研究中国民族音乐的特色和规律。该识别器运用音频分析技术和机器学习算法，对音乐信号进行处理，提取音乐特征，并与内置的五声调式模型进行匹配，从而识别出音乐片段的调式。它不仅支持音乐教育和学术研究，还能为音乐创作提供灵感。用户界面友好，操作简单，支持多种音频格式，使其成为分析中国民族音乐的有力工具。
