@@ -12,7 +12,7 @@ from utils import (
     get_modelist,
     find_audio_files,
     embed_img,
-    _L,
+    ZH2EN,
     SAMPLE_RATE,
     TEMP_DIR,
     TRANSLATE,
@@ -115,25 +115,29 @@ if __name__ == "__main__":
     for audio in example_audios:
         examples.append([audio, models[0]])
 
+    i18n = gr.I18n(
+        zh={key: key for key in ZH2EN},
+        en=ZH2EN,
+    )
     with gr.Blocks() as demo:
         gr.Interface(
             fn=infer,
             inputs=[
-                gr.Audio(label=_L("上传录音"), type="filepath"),
-                gr.Dropdown(choices=models, label=_L("选择模型"), value=models[0]),
+                gr.Audio(label=i18n("上传录音"), type="filepath"),
+                gr.Dropdown(choices=models, label=i18n("选择模型"), value=models[0]),
             ],
             outputs=[
-                gr.Textbox(label=_L("状态栏"), buttons=["copy"]),
-                gr.Textbox(label=_L("音频文件名"), buttons=["copy"]),
-                gr.Textbox(label=_L("中国五声调式识别"), buttons=["copy"]),
+                gr.Textbox(label=i18n("状态栏"), buttons=["copy"]),
+                gr.Textbox(label=i18n("音频文件名"), buttons=["copy"]),
+                gr.Textbox(label=i18n("中国五声调式识别"), buttons=["copy"]),
             ],
             examples=examples,
             cache_examples=False,
             flagging_mode="never",
-            title=_L("建议录音时长保持在 20s 左右"),
+            title=i18n("建议录音时长保持在 20s 左右"),
         )
 
-        gr.Markdown(f"# {_L('引用')}" + """
+        gr.Markdown(f"# {i18n('引用')}" + """
             ```bibtex
             @article{Zhou-2025,
                 author  = {Monan Zhou and Shenyang Xu and Zhaorui Liu and Zhaowen Wang and Feng Yu and Wei Li and Baoqiang Han},
@@ -151,6 +155,7 @@ if __name__ == "__main__":
 
     demo.launch(
         theme=gr.themes.Ocean(),
-        css="#gradio-share-link-button-0 { display: none; }",
+        css="#gradio-share-link-button-0, thead { display: none; }",
         ssr_mode=False,
+        i18n=i18n,
     )
